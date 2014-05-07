@@ -34,7 +34,8 @@ div#tresc {
 footer{
 
 position: fixed;
-bottom: 10 px;
+left: 2em;
+bottom: 10px;
 }
 /* opracowane wartości dla artykułów  */
 .row:before,
