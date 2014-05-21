@@ -16,11 +16,26 @@ nav {
   width: 100%;
   min-height: 25px;
 }
+#belkaboczna{
+position: fixed;
+top: 130px;
+left: 0px;
+padding: 10px;
+list-style: none outside none;
+background: linear-gradient(#555, #444 50%, #333 50%, #111) repeat scroll 0% 0% transparent;
+border-width: 2px 2px 2px 0px;
+border-style: solid;
+border-color: #777 #888 #999;
+border-top-right-radius: 6px;
+border-bottom-right-radius: 6px;
+box-shadow: 7px 0px 10px -5px #888;
+
+}
 span.el_menu {
   margin: 2px;
   padding: 2px;
   border: 1px solid black;
-  color: brown;
+/*  color: brown; */
 }
 span.el_menu :hover {
   background: white;
@@ -32,10 +47,11 @@ div#tresc {
   overflow: auto;
 }
 footer{
-
-position: fixed;
-left: 2em;
-bottom: 10px;
+  background-color: #555;
+  position: fixed;
+  left: 2em;
+  bottom: 10px;
+  width: auto;
 }
 /* opracowane wartości dla artykułów  */
 .row:before,
