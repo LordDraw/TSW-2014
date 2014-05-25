@@ -37,7 +37,7 @@
     transition:  opacity .2s ease-in-out;
 }
 #social_side_right li a:hover img {
-    opacity: 0.3;
+    opacity: 0;
 }
 #social_side_right li a:active img {
     opacity: 1;
