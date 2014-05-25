@@ -16,21 +16,57 @@ nav {
   width: 100%;
   min-height: 25px;
 }
-#belkaboczna{
-position: fixed;
-top: 130px;
-left: 0px;
-padding: 10px;
-list-style: none outside none;
-background: linear-gradient(#555, #444 50%, #333 50%, #111) repeat scroll 0% 0% transparent;
-border-width: 2px 2px 2px 0px;
-border-style: solid;
-border-color: #777 #888 #999;
-border-top-right-radius: 6px;
-border-bottom-right-radius: 6px;
-box-shadow: 7px 0px 10px -5px #888;
 
+
+/* Społecznościowe - do przeniesienia w odzielny css */
+#social_side_right {
+    position: fixed;
+    top: 130px;
+    right: 0;
+    padding: 10px;
+  list-style: none;
+    background: #555;
+    background: -webkit-gradient(linear, left top, left bottom, from( #555 ), to( #111 ), color-stop( 50%, #444 ), color-stop( 50%, #333 ));
+    background: -webkit-linear-gradient(#555, #444 50%, #333 50%, #111);
+    background: -moz-linear-gradient(#555, #444 50%, #333 50%, #111);
+    background: -ms-linear-gradient(#555, #444 50%, #333 50%, #111);
+    background: -o-linear-gradient(#555, #444 50%, #333 50%, #111);
+    background: linear-gradient(#555, #444 50%, #333 50%, #111);
+    border-width: 2px 2px 2px 0;
+    border-style: solid;
+    border-color: #777 #888 #999;
+    -webkit-border-top-right-radius: 6px;
+    -moz-border-top-right-radius: 6px;
+    border-top-right-radius: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+    -moz-border-bottom-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    -webkit-box-shadow: #888 7px 0 10px -5px;
+    -moz-box-shadow: #888 7px 0 10px -5px;
+    -o-box-shadow: #888 7px 0 10px -5px;
+    box-shadow: #888 7px 0 10px -5px;
 }
+#social_side_right li a {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+#social_side_right li a img {
+    -webkit-transition:  opacity .2s ease-in-out;
+    -moz-transition:  opacity .2s ease-in-out;
+    -o-transition:  opacity .2s ease-in-out;
+    transition:  opacity .2s ease-in-out;
+}
+#social_side_right li a:hover img {
+    opacity: 0.3;
+}
+#social_side_right li a:active img {
+    opacity: 1;
+}
+#social_side_right #facebook {
+    background-image: url("/icon/facebook.png");
+}
+
 span.el_menu {
   margin: 2px;
   padding: 2px;
@@ -41,8 +77,10 @@ span.el_menu :hover {
   background: white;
 }
 div#tresc {
-  position: fixed;
+  position: absolute;
   top: 41px;
+  left: 70px;
+  right: 70px;
   bottom: 0px;
   overflow: auto;
 }
