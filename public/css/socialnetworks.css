@@ -42,6 +42,8 @@
 #social_side_right li a:active img {
     opacity: 1;
 }
+
+
 #social_side_right #facebook {
     background-image: url("../../icon/facebook.png");
     background-repeat: no-repeat; 
