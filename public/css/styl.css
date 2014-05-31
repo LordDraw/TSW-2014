@@ -9,13 +9,13 @@ body {
 a, a:link, a:visited {
   text-decoration:none;
 }
-/*
+
 header{
   float: left;
   width: auto;
 
 }
-*/
+
 nav {
   border: 3px #aaa outset;
   text-align: center;

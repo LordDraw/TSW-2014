@@ -48,5 +48,9 @@
     background-image: url("../../icon/facebook.png");
     background-repeat: no-repeat; 
 }
-
-/* do dorobienia - ikona twitera */
+/* do dorobienia - ikona twitera 
+#social_side_right #twitter {
+    background-image: url("../../icon/twitter.png");
+    background-repeat: no-repeat; 
+}
+*/
