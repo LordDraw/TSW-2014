@@ -101,6 +101,7 @@ h3.kategorie {
   font-size: 0.88em;
   margin: 0px;
   padding-left: 6px;
+  text-align: center;
 }
 
 
@@ -127,54 +128,4 @@ footer{
   left: 2em;
   bottom: 10px;
   width: auto;
-}
-/* opracowane wartości dla artykułów  */
-.row:before,
-.row:after {
-  display: table;
-  content: " ";
-}
-
-.row:after {
-  clear: both;
-}
-
-.row:before,
-.row:after {
-  display: table;
-  content: " ";
-}
-
-.row:after {
-  clear: both;
-}
-
-.row:before,
-.row:after {
-  display: table;
-  content: " ";
-}
-
-.row:after {
-  clear: both;
-}
-
-.row:before,
-.row:after {
-  display: table;
-  content: " ";
-}
-
-.row:after {
-  clear: both;
-}
-
-.row:before,
-.row:after {
-  display: table;
-  content: " ";
-}
-
-.row:after {
-  clear: both;
 }

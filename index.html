@@ -3,24 +3,46 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Serwis Informacyjny</title>
+  <!-- Bootstrap -->
+    <link href="../components-bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	 <link rel="stylesheet" type="text/css" href="public/css/styl.css"> 
    <link href="public/css/socialnetworks.css" media="screen" type="text/css" rel="stylesheet">
 </head>
-<body><!--
-  <header>
-    <img src="" alt='logo'> Witaj w serwisie informacyjnym.
-  </header> -->
-<nav>
-      <span class="el_menu"><a href="kategorie/work/index.html">Praca</a></span>
-      <span class="el_menu"><a href="#A2">Akapit 2</a></span>
-      <span class="el_menu"><a href="#A3">Akapit 3</a></span>
-      <span class="el_menu"><a href="#A4">Akapit 4</a></span>
-      <span class="el_menu"><a href="#A5">Akapit 5</a></span>
-      <span class="el_menu"><a href="#A6">Akapit 6</a></span>
-      <span class="el_menu"><a href="#A7">Akapit 7</a></span>
-      <span class="el_menu"><a href="#A8">Akapit 8</a></span>
-      <span class="el_menu"><a href="#A9">Akapit 9</a></span>
-      <span class="el_menu"><a href="#A10">Akapit 10</a></span>
+<body>
+  <nav id="top_nav">
+    <ul class="nav nav-pills navbar-inverse">
+      <li class="active"><a href="/">Strona Główna</a></li>
+      <li class="dropdown">
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Kategorie</a>
+          <ul class="dropdown-menu">
+            <li><a href="/work/" id="work">Praca</a></li>
+            <li><a href="#" id="politics">Polityka</a></li>
+            <li><a href="#" id="musik">Muzyka</a></li>
+            <li class="divider"></li>
+            <li><a href="#" id="misc">Inne</a></li>
+            <li><a href="#" id="all">Wszystkie</a></li>
+          </ul>
+      </li>
+
+      <li><a href="#">Profil</a></li>
+      <li class="dropdown pull-right" style="visibility:hidden;">
+          <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+      </li>
+        <div id="nickWrap">
+          <div id="user"></div>
+          <div id="nickError"></div>
+        <form action="" id="setNick" class="navbar-form">
+          <input type="text" class="form-control"  id="nickname">
+          <input type="submit" class="btn btn-default">
+        </form>
+    </div>
+    </ul>
     </nav>
 
 <ul id="social_side_right">
@@ -40,19 +62,53 @@
 </ul>
 
  <div id="wrapper"> 
-  <div id="tresc">
-      <p id="A1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p id="A2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>   
+
+  <header id="top_header" class="jumbotron container">
+    <h3> Witaj w serwisie informacyjnym.</h3>
+  </header> 
+
+  <div id="main" class="hero-unit container">
+                  <section id="main_section" class="">
+              <div id="articles">
+                <article>
+                    <header>
+                        <hgroup>
+                            <h1>Tytuł artykułu</h1>
+                            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
+
+                           
+                        </hgroup>
+                    </header>
+                    <p>wiadomość</p>
+                    <footer>
+                        <small>by <cite>Admin</cite></small>
+                    </footer>
+                </article>
+                <article>
+                    <header>
+                        <hgroup>
+                            <h1>Tytuł artykułu 2</h1>
+                            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.orem</h2>
+                         
+                        </hgroup>
+                    </header>
+                    <p>wiadomość</p>
+                    <footer>
+                        <small>by <cite>Admin</cite></small>
+                    </footer>
+                </article>
+        </div>
+            </section>
        </div>
   <div id="inne">
       <h2>Inne ciekawe linki</h2>
@@ -70,10 +126,10 @@
 </ul>
 </div>
   <div id="belkaboczna">
-      <h3 align="center" id="kategorie">
+      <h3 id="kategorie">
         O mnie
       </h3>
-     <p> <img src="public/images/av.png"></p>
+     <p> <img src="public/images/av.png" alt="avatar"></p>
       <ul>
     <li>
         Imię: Paweł
@@ -87,6 +143,7 @@
     <li>
         Inne: szukam dziewczyny
     </li>
+  </ul>
   </div>
      
      </div>
