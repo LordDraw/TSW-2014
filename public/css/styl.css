@@ -1,3 +1,8 @@
+header, section, footer, aside, nav, article{
+  display: block;
+  
+}
+
 body {
   background: #cccccc;
   padding: 0px;
@@ -50,10 +55,9 @@ nav {
 #belkaboczna
 {
     float: left;
-    width: 200px;
-    margin-left: -960px;
-    background-color: #D5E6F8;
-    outline: 2px dashed #E2E3E4;
+width: 270px;
+margin: 20px 0px;
+padding: 30px;
 }
 #belkaboczna p{
   text-align: center;
@@ -104,7 +108,9 @@ h3.kategorie {
   text-align: center;
 }
 
-
+article{
+  margin-top: 15px;
+}
 
 span.el_menu {
   margin: 2px;
@@ -123,6 +129,9 @@ div#tresc {
   margin-right: 20px;
 }
 footer{
+  clear:both; /* bez marginesów/paddingów */
+  text-align: center;
+  padding:20px;
   background-color: #555;
   position: absolute;
   left: 2em;
