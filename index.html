@@ -26,11 +26,11 @@
     <ul class="nav nav-pills navbar-inverse">
       <li class="active"><a href="/">Strona Główna</a></li>
       <li class="dropdown">
-        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Kategorie</a>
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Redaktorzy działów</a>
           <ul class="dropdown-menu">
             <li><a id="work">Praca</a></li>
             <li><a id="politics">Polityka</a></li>
-            <li><a id="musik">Muzyka</a></li>
+            <li><a id="music">Muzyka</a></li>
             <li><a id="misc">Inne</a></li>
             <li class="divider"></li>
             <li><a id="all">Wszystkie</a></li>
@@ -38,22 +38,21 @@
       </li>
 
       <li><a href="#">Profil</a></li>
-      <li class="dropdown pull-right" style="visibility:hidden;">
+      <li class="dropdown pull-right" id="ACP" style="visibility:hidden;">
           <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Settings</a></li>
+                    <li><a id="#">Dodaj Artykuł</a></li>
                 </ul>
       </li>
         <div id="nickWrap">
           <div id="user"></div>
           <div id="nickError"></div>
         <form action="" id="setNick" class="navbar-form">
-          <input type="text" class="form-control"  id="nickname">
-          <input type="submit" class="btn btn-default">
+          <input type="text" class="form-control" placeholder="nick redaktora" id="nickname">
+                    <input type="password" class="form-control" placeholder="Nazwisko" id="pass">
+          <input type="submit" class="btn btn-success" value="Zaloguj">
         </form>
+     <a href="/" class="btn btn-warning" id="logout">Wyloguj</a>
     </div>
     </ul>
     </nav>
@@ -85,7 +84,7 @@
               <div id="articles">
                 <article>
                     <header>
-                        <hgroup>
+                        
                             <h1>Tytuł artykułu</h1>
                             <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -95,7 +94,7 @@
                             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
 
                            
-                        </hgroup>
+                       
                     </header>
                     <p>wiadomość</p>
                     <footer>
@@ -104,7 +103,7 @@
                 </article>
                 <article>
                     <header>
-                        <hgroup>
+                        
                             <h1>Tytuł artykułu 2</h1>
                             <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -113,7 +112,7 @@
                             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
                          
-                        </hgroup>
+                        
                     </header>
                     <p>wiadomość</p>
                     <footer>
@@ -123,22 +122,37 @@
         </div>
             </section>
        </div>
-  <div id="belkaboczna">
-      <h2>Inne ciekawe linki</h2>
-<ul id="stories">
+  <div id="belkaboczna" class=" text-left">
+                <h4>Nowości</h4>
+                Ruszyła strona w wersji v0.0.0.69 Alpha. Wszelkie problemy prosimy zgłaszać do redakcji w ich profilach.
+                Pomocne linki:
+<ul id="addresses">
 <li><a href="http://google.pl">Google</a></li>
 <li><a href="http://pl.wikipedia.org">Wikipedia</a></li>
 <li><a href="http://spotify.pl">Spotify</a></li>
-<li><a href="">Potop</a></li>
-<li><a href="">Historia nimfy Io</a></li>
-<li><a href="">Cudowna tkaczka</a></li>
-<li><a href="">Kadmos i Europa</a></li>
-<li><a href="">Wyprawa po głowę Meduzy</a></li>
-<li><a href="">Historia Atlanty</a></li>
-<li><a href="">Koń i oliwa</a></li>
+<li><a href="https://pl.youtube.com">Youtube</a></li>
 </ul>
 </div>
-
+      <div id="formularzKontaktowy">
+       <form>
+      <div class="form-group">
+        <label for="inputName">Dwoje uwagi składasz do:</label>
+        <input type="text" class="form-control" id="wybrany" disabled>
+      </div>
+                   <h5>Podaj poniżej swoje dane osobowe i uwagi w odpowiednie pola</h5>
+      
+      <form>
+      <div class="form-group">
+        <label for="inputOpinion">Uwaga</label>
+        <textarea type="text" id="inputSuggestion" placeholder="Twoje uwagi, znalezione błędy lub propozycje zmian"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="inputSurname">Twoje imię i nazwisko lub ksywka</label>
+        <input type="text" class="form-control" id="inputSurname" data-toggle="tooltip" data-placement="right" title="Podaj swoje dane osobowe lub nick. Nie będziemy udostępniać twoich danych!" placeholder="Nick lub imię i nazwisko">
+      <button type="submit" class="btn btn-primary">Wyślij</button>
+    </form>
+      
+        </div>
      
      </div>
     <footer id="bottom_footer" class="container">
