@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Serwis Informacyjny</title>
+  <!-- Bootstrap -->
+    <link href="../components-bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	 <link rel="stylesheet" type="text/css" href="public/css/styl.css"> 
+   <link href="public/css/socialnetworks.css" media="screen" type="text/css" rel="stylesheet">
+
+
+
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="../socket.io/socket.io.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../components-bootstrap/js/bootstrap.min.js"></script>
+	
+	<script src="script/admin.js"></script>
+
+	<style>
+	.form-group input {
+    width:300px;
+}
+   </style>
+
+   </head>
+<body>
+  <nav id="top_nav">
+    <ul class="nav nav-pills navbar-inverse">
+      <li class="active"><a href="/">Strona Główna</a></li>
+      <li class="dropdown">
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Redaktorzy działów<b class="caret"></b></a>
+     <ul class="dropdown-menu">
+                    <li><a href="work.html">Praca</a></li>
+                    <li><a href="politics.html">Polityka</a></li>
+                    <li><a href="music.html">Muzyka</a></li>
+                    <li class="divider"></li>
+                    <li><a href="misc.html">Inne</a></li>
+                </ul>
+            </li>
+     		<li><a href="#">Profile</a></li>
+            <li class="dropdown pull-right" style="visibility: hidden;">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Dodaj artykuł</a></li>
+                    <li><a href="#">Przejrzyj zgłoszenia</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Ustawienia</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <ul id="social_side_right">
+
+    <li id="facebook">
+        <a onclick="window.open(this.href,'_blank'); return false;" href="https://www.facebook.com/">
+            <img alt="/" src="icon/facebooks.png">
+        </a>
+    </li>
+    <!--
+    <li id="twitter">
+        <a onclick="window.open(this.href,'_blank'); return false;" href="https://www.twitter.com/">
+            <img alt="/" src="icon/twitters.png">
+        </a>
+    </li>
+  -->
+</ul>
+
+<div id="wrapper"> 
+
+  <header id="top_header" class="jumbotron container">
+
+  	<h3> Formularz zgłoszeniowy</h3>
+  </header> 
+
+  <div id="new_div" class="hero-unit container">
+  	<h3>Dane właściciela:</h3>
+		  <form>
+			<div class="form-group">
+				<label for="inputName">Imię</label>
+				<input type="text" class="form-control" id="inputName" placeholder="Imię">
+			</div>
+			<div class="form-group">
+				<label for="inputSuggestion">Uwaga</label>
+				<textarea id="inputSuggestion" placeholder="Twoje uwagi, znalezione błędy lub propozycje zmian"></textarea>
+			</div>
+			<button type="submit" class="btn btn-primary">Wyślij</button>
+		</form>
+
+        </div>
+        <footer id="bottom_footer" class="container">
+  Strona internetowa korzysta z Ciasteczek. Więcej informacji znajdziesz <a href="http://pl.wikipedia.org/wiki/Ciasteczko">tutaj</a>
+  Uwagi możesz jeszcze zgłaszać do administratora na adres e-mail <a href="mailto:admin@testowastrona.pl">tutaj</a>
+</footer>
+</div>
+</body>
+</html>
