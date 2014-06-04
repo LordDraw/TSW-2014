@@ -6,5 +6,13 @@ var express = require('express'),
 	mongoose = require('mongoose'),
 	nicknames = [],
 	count = 1;
+    wejsc = 0;
 
 server.listen(3000);
+
+app.use(less({
+    src: '/strony/less',
+    dest: '/strony/public/css',
+    prefix: '/css',
+    compress: true
+}));
