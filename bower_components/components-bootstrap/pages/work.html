@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Schronisko</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../css/glowna.css" rel="stylesheet">
+    <link href="css/animal.css" rel="stylesheet">
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+	<script src="script/buttons.js"></script>
+</head>
+<body>
+  <nav id="top_nav">
+    <ul class="nav nav-pills navbar-inverse">
+      <li class="active"><a href="/">Strona Główna</a></li>
+      <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Redaktorzy działów <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../components-bootstrap/pages/work.html">Praca</a></li>
+                    <li><a href="../components-bootstrap/pages/politics.html">Polityka</a></li>
+                    <li><a href="../components-bootstrap/pages/music.html">Muzyka</a></li>
+                    <li class="divider"></li>
+                    <li><a href="../components-bootstrap/pages/misc.html">Inne</a></li>
+                </ul>
+            </li>
+             <li><a href="#">Profile</a></li>
+            <li class="dropdown pull-right" style="visibility: hidden;">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Dodaj artykuł</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <ul id="social_side_right">
+
+    <li id="facebook">
+        <a onclick="window.open(this.href,'_blank'); return false;" href="https://www.facebook.com/">
+            <img alt="/" src="icon/facebooks.png">
+        </a>
+    </li>
+    <!--
+    <li id="twitter">
+        <a onclick="window.open(this.href,'_blank'); return false;" href="https://www.twitter.com/">
+            <img alt="/" src="icon/twitters.png">
+        </a>
+    </li>
+  -->
+</ul>
+
+ <div id="wrapper"> 
+
+  <header id="top_header" class="jumbotron container">
+    <h3> Witaj w serwisie informacyjnym.</h3>
+  </header>
+
+  <div id="new_div" class="hero-unit container">
+            <section id="main_section" class="">
+                <article>
+                    <header>
+                        <p>Jerzy Anders</p>
+                    </header>
+                    <div class="obr">
+                        <img src="photos/work/redw1.jpg" alt="janders" class="img-thumbnail">
+                    </div>
+                    <table class="table table-striped tab">
+                        <tr>
+                            <th>Wiek</th>
+                            <td>21</td>
+                        </tr>
+                        <tr>
+                            <th>Zainteresowania</th>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <th>Skąd</th>
+                            <td>Bydgoszcz</td>
+                        </tr>
+                        <tr>
+                            <th>ID redaktora</th>
+                            <td>1</td>
+                        </tr>
+                    </table>
+                    <footer>
+                        <p><a href="form.html" class="btn btn-success btn-lg" id="redw1">Kontakt</a></p>
+                    </footer>
+                </article>
+                <article>
+                    <header>
+                        <p>Andrzej Słowiński</p>
+                    </header>
+                    <div class="obr">
+                        <img src="photos/work/redw2.jpg" alt="aslowinski" class="img-thumbnail">
+                    </div>
+                    <table class="table table-striped tab">
+                         <tr>
+                            <th>Wiek</th>
+                            <td>22</td>
+                        </tr>
+                        <tr>
+                            <th>Zainteresowania</th>
+                            <td>film</td>
+                        </tr>
+                        <tr>
+                            <th>Skąd</th>
+                            <td>Toruń</td>
+                        </tr>
+                        <tr>
+                            <th>ID redaktora</th>
+                            <td>2</td>
+                        </tr>
+                    </table>
+                    <footer>
+                        <p><a href="form.html" class="btn btn-success btn-lg" id="redw2">Kontakt</a></p>
+                    </footer>
+                </article>
+            </section>
+          
+        </div>
+        <footer id="bottom_footer" class="container">
+  Strona internetowa korzysta z Ciasteczek. Więcej informacji znajdziesz <a href="http://pl.wikipedia.org/wiki/Ciasteczko">tutaj</a>
+  Uwagi możesz jeszcze zgłaszać do administratora na adres e-mail <a href="mailto:admin@testowastrona.pl">tutaj</a>
+</footer>
+</div>
+</body>
+</html>
