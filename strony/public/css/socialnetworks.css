@@ -3,7 +3,7 @@
     top: 130px;
     right: -5px;
     padding: 10px;
-  list-style: none;
+    list-style: none;
     background: #555;
     background: -webkit-gradient(linear, left top, left bottom, from( #555 ), to( #111 ), color-stop( 50%, #444 ), color-stop( 50%, #333 ));
     background: -webkit-linear-gradient(#555, #444 50%, #333 50%, #111);
@@ -43,6 +43,9 @@
     opacity: 1;
 }
 
+#social_side_right ul {
+  list-style: none;
+}
 
 #social_side_right #facebook {
     background-image: url("../../icon/facebook.png");
