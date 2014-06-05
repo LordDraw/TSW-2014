@@ -111,7 +111,7 @@
     });
 
     function zgloszono() {
-        $('.przygarnij').click(function () {
+        $('.zglos').click(function () {
             $('#main_section').hide();
             $('#belkaboczna').hide();
             $("#formularzkontaktowy").show();
