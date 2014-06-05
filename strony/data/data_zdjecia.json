@@ -1,10 +1,10 @@
 {
-    "zwierze0":{ "src": "photos/Rex.jpg" },
-    "zwierze1":{ "src": "photos/Ren.jpg" },
-    "zwierze2":{ "src": "photos/Margo.jpg" },
-    "zwierze3":{ "src": "photos/Amit.jpg" },
-    "zwierze4":{ "src": "photos/Emi.jpg"},
-    "zwierze5":{ "src": "photos/Tofik.jpg"},
-    "zwierze6":{ "src": "photos/Fama.jpg" },
-    "zwierze7":{ "src": "photos/Ami.jpg" }
+    "redaktor0":{ "src": "photos/Janders.jpg" },
+    "redaktor1":{ "src": "photos/Aslowinski.jpg" },
+    "redaktor2":{ "src": "photos/Jkowalski.jpg" },
+    "redaktor3":{ "src": "photos/JNowak.jpg" },
+    "redaktor4":{ "src": "photos/Hbur.jpg"},
+    "redaktor5":{ "src": "photos/Ikos.jpg"},
+    "redaktor6":{ "src": "photos/Hmazur.jpg" },
+    "redaktor7":{ "src": "photos/Gsz.jpg" }
 }

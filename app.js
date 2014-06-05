@@ -8,7 +8,9 @@ var express = require('express'),
 	count = 1;
     wejsc = 0;
 
-server.listen(3000);
+server.listen(3000, function () {
+    console.log('Serwer działa na porcie 3000');
+});
 
 app.use(less({
     src: '/strony/less',

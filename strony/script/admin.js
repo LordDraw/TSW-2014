@@ -1,4 +1,4 @@
 ﻿$(function () {
-	//console.log($('.jedzenie').width());
+	//funkcje będa wstawione już po oddaniu projektu
 	
 });

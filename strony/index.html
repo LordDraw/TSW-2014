@@ -1,46 +1,59 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>Serwis Informacyjny</title>
+  <meta charset="UTF-8">
+  <title>Serwis Informacyjny</title>
   <!-- Bootstrap -->
     <link href="../components-bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	 <link rel="stylesheet" type="text/css" href="public/css/styl.css"> 
-   <link href="public/css/socialnetworks.css" media="screen" type="text/css" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="css/styl.css"> 
+   <link href="css/redactor.css" rel="stylesheet">
+   <link href="css/socialnetworks.css" media="screen" type="text/css" rel="stylesheet">
+
+
+
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="../socket.io/socket.io.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../components-bootstrap/js/bootstrap.min.js"></script>
+  <script src="script/user.js"></script>
+  
+  <script src="script/shift.js"></script>
+  <script src="script/form.js"></script>
+  <script src="script/admin.js"></script>
 </head>
 <body>
   <nav id="top_nav">
     <ul class="nav nav-pills navbar-inverse">
       <li class="active"><a href="/">Strona Główna</a></li>
       <li class="dropdown">
-        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Kategorie</a>
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Redaktorzy działów</a>
           <ul class="dropdown-menu">
-            <li><a href="/work/" id="work">Praca</a></li>
-            <li><a href="#" id="politics">Polityka</a></li>
-            <li><a href="#" id="musik">Muzyka</a></li>
+            <li><a id="work">Praca</a></li>
+            <li><a id="politics">Polityka</a></li>
+            <li><a id="music">Muzyka</a></li>
+            <li><a id="misc">Inne</a></li>
             <li class="divider"></li>
-            <li><a href="#" id="misc">Inne</a></li>
-            <li><a href="#" id="all">Wszystkie</a></li>
+            <li><a id="all">Wszystkie</a></li>
           </ul>
       </li>
 
       <li><a href="#">Profil</a></li>
-      <li class="dropdown pull-right" style="visibility:hidden;">
+      <li class="dropdown pull-right" id="ACP" style="visibility:hidden;">
           <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Settings</a></li>
+                    <li><a id="#">Dodaj Artykuł</a></li>
                 </ul>
       </li>
         <div id="nickWrap">
           <div id="user"></div>
           <div id="nickError"></div>
         <form action="" id="setNick" class="navbar-form">
-          <input type="text" class="form-control"  id="nickname">
-          <input type="submit" class="btn btn-default">
+          <input type="text" class="form-control" placeholder="nick redaktora" id="nickname">
+                    <input type="password" class="form-control" placeholder="Nazwisko" id="pass">
+          <input type="submit" class="btn btn-success" value="Zaloguj">
         </form>
+     <a href="/" class="btn btn-warning" id="logout">Wyloguj</a>
     </div>
     </ul>
     </nav>
@@ -72,7 +85,7 @@
               <div id="articles">
                 <article>
                     <header>
-                        <hgroup>
+                        
                             <h1>Tytuł artykułu</h1>
                             <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -82,7 +95,7 @@
                             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
 
                            
-                        </hgroup>
+                       
                     </header>
                     <p>wiadomość</p>
                     <footer>
@@ -91,16 +104,16 @@
                 </article>
                 <article>
                     <header>
-                        <hgroup>
+                        
                             <h1>Tytuł artykułu 2</h1>
                             <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.orem</h2>
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
                          
-                        </hgroup>
+                        
                     </header>
                     <p>wiadomość</p>
                     <footer>
@@ -110,45 +123,44 @@
         </div>
             </section>
        </div>
-  <div id="inne">
-      <h2>Inne ciekawe linki</h2>
-<ul id="stories">
+  <div id="belkaboczna" class="text-left">
+                <h4>Nowości</h4>
+                Ruszyła strona w wersji v0.0.0.69 Alpha. Wszelkie problemy prosimy zgłaszać do redakcji w ich profilach.
+                Pomocne linki:
+<ul id="addresses">
 <li><a href="http://google.pl">Google</a></li>
 <li><a href="http://pl.wikipedia.org">Wikipedia</a></li>
 <li><a href="http://spotify.pl">Spotify</a></li>
-<li><a href="">Potop</a></li>
-<li><a href="">Historia nimfy Io</a></li>
-<li><a href="">Cudowna tkaczka</a></li>
-<li><a href="">Kadmos i Europa</a></li>
-<li><a href="">Wyprawa po głowę Meduzy</a></li>
-<li><a href="">Historia Atlanty</a></li>
-<li><a href="">Koń i oliwa</a></li>
+<li><a href="https://pl.youtube.com">Youtube</a></li>
 </ul>
 </div>
-  <div id="belkaboczna">
-      <h3 id="kategorie">
-        O mnie
-      </h3>
-     <p> <img src="public/images/av.png" alt="avatar"></p>
-      <ul>
-    <li>
-        Imię: Paweł
-    <li>
-        Wiek: 23 lata
-    </li>
-  <!--  <li>
-        <a href="/kategorie/"></a>
-        Rozrywka
-    </li> -->
-    <li>
-        Inne: szukam dziewczyny
-    </li>
-  </ul>
-  </div>
+      <div id="formularzKontaktowy">
+       <form>
+      <div class="form-group">
+        <label for="inputName">Swoje uwagi składasz do:</label>
+        <input type="text" class="form-control" id="wybrany" disabled>
+      </div>
+                   <h5>Podaj poniżej swoje dane osobowe i uwagi w odpowiednie pola</h5>
+      
+
+      <div class="form-group">
+        <label for="inputName">Twoje imię i nazwisko lub ksywka</label>
+        <input type="text" class="form-control" id="inputName" data-toggle="tooltip" data-placement="right" title="Podaj swoje dane osobowe lub nick. Nie będziemy udostępniać twoich danych!" placeholder="Nick lub imię i nazwisko">
+
+      <div class="form-group">
+        <label for="inputSuggestion">Uwaga</label>
+        <textarea id="inputSuggestion" placeholder="Twoje uwagi, znalezione błędy lub propozycje zmian"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Wyślij</button>
+        </div>
+      </form>
+     
      
      </div>
-    <footer>
+    <footer id="bottom_footer" class="container">
   Strona internetowa korzysta z Ciasteczek. Więcej informacji znajdziesz <a href="http://pl.wikipedia.org/wiki/Ciasteczko">tutaj</a>
+  Uwagi możesz jeszcze zgłaszać do administratora na adres e-mail <a href="mailto:admin@testowastrona.pl">tutaj</a>
 </footer>
+</div>
 </body>
 </html>

@@ -9,10 +9,59 @@
 	
 	$nickForm.submit(function(e){
 		e.preventDefault();
-        if($nickBox.val()==="admin"){
+        if($nickBox.val()==="janders"){
             $pass.show( function() {
-                if($pass.val()==="123") {
-                    $("#panelAdmina").css("visibility", "visible");
+                if($pass.val()==="ppp") {
+                    $("#ACP").css("visibility", "visible");
+                }
+            });
+        }
+        if($nickBox.val()==="aslowinski"){
+            $pass.show( function() {
+                if($pass.val()==="aaa") {
+                    $("#ACP").css("visibility", "visible");
+                }
+            });
+        }
+        if($nickBox.val()==="jkowalski"){
+            $pass.show( function() {
+                if($pass.val()==="bbb") {
+                    $("#ACP").css("visibility", "visible");
+                }
+            });
+        }
+        if($nickBox.val()==="jnowak"){
+            $pass.show( function() {
+                if($pass.val()==="ccc") {
+                    $("#ACP").css("visibility", "visible");
+                }
+            });
+        }
+        if($nickBox.val()==="hbur"){
+            $pass.show( function() {
+                if($pass.val()==="ddd") {
+                    $("#ACP").css("visibility", "visible");
+                }
+            });
+        }
+        if($nickBox.val()==="ikos"){
+            $pass.show( function() {
+                if($pass.val()==="eee") {
+                    $("#ACP").css("visibility", "visible");
+                }
+            });
+        }
+        if($nickBox.val()==="hmazur"){
+            $pass.show( function() {
+                if($pass.val()==="fff") {
+                    $("#ACP").css("visibility", "visible");
+                }
+            });
+        }
+        if($nickBox.val()==="gsz"){
+            $pass.show( function() {
+                if($pass.val()==="ggg") {
+                    $("#ACP").css("visibility", "visible");
                 }
             });
         }
@@ -24,7 +73,7 @@
 				$user.show();
                 $logout.show();
 			} else{
-				$nickError.html('Ten login już został użyty. Spróbuj ponownie');
+				$nickError.html('Ten login jest obecnie używany. Spróbuj ponownie');
 			}
 		});
             $nickBox.val('');
