@@ -51,10 +51,9 @@
   list-style: none;
 }
 
-#social_side_right #facebook {
-    background-image: url("../../icon/facebook.png");
-    background-repeat: no-repeat; 
-
+#facebook > a:nth-child(1) > img:nth-child(1) {
+    background-image: url("/icon/facebook.png");
+    background-repeat: no-repeat;
 }
 /* do dorobienia - ikona twitera 
 #social_side_right #twitter {

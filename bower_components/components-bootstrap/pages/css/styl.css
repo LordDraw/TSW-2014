@@ -1,20 +1,12 @@
-
 header, section, footer, nav, article{
   display: block;
-  
 }
 
-
-#wrapper {
-  margin-top: 0;
-}
 #top_header {
-  padding: 20px; /* w środku */
-  margin-bottom:0px;
+  padding: 20px; /* wyśrodkowany */
+  margin-bottom: 0px;
 }
-#new_div{
-  
-}
+
 #main_section{
   
   float: left;  
@@ -22,12 +14,26 @@ header, section, footer, nav, article{
   margin: 30px; /* 720px, 280 left*/
 }
 
-#belkaboczna {
-  float: left;
-  width: 270px;
-  margin: 20px 0px; /* top bottom */
-  padding: 30px;
-  
+#wrapper{
+  width: 960px;
+    margin: 0 auto;
+        margin-top: 0px;
+        margin-right-value: 0px;
+        margin-bottom: 0px;
+        margin-left-value: 0px;
+        margin-left-ltr-source: physical;
+        margin-left-rtl-source: physical;
+        margin-right-ltr-source: physical;
+        margin-right-rtl-source: physical; 
+}
+
+#belkaboczna{
+{
+    float: left;
+    width: 200px;
+    margin-left: -960px;
+    background-color: #D5E6F8;
+    outline: 2px dashed #E2E3E4;
 }
 
 #bottom_footer {
@@ -35,51 +41,57 @@ header, section, footer, nav, article{
   text-align: center;
   padding:20px;
   border-top: 2px solid green;
+  left: 2em;
+  width: auto;
 
 }
 
-articles {
-  
-  padding: 20px;
-  margin-bottom: 15px;
+article{
+  margin-top: 15px;
 }
 
 article footer{
   text-align:right;
 }
+
 .form-group input {
     width:300px;
 }
+
 #nickWrap{
   float:right;
   margin: -5px 0 -5px 0;
 }
+
 #nickBox, #nickError,#user{
   color:#428bca;
 }
+
 #user{
   font-size:20px;
     padding-top:10px;
     padding-right: 100px;
+    display: none;
 }
+
 #logout{
     position: absolute;
     right: 95px;
     top: 3px;
     display:none;
 }
+
 #pass{
     display: none;
 }
 .dropdown-menu li{
-cursor:pointer;
+    cursor:pointer;
 }
-/*#user{
-            display: none;
-        } */
-#formularzkontaktowy{
+
+#formularzKontaktowy{
   display: none;
 }
+
 #nickError{
     position: absolute;
     right: 365px;
@@ -96,3 +108,10 @@ textarea {
   overflow: auto;
   resize: none;
 }
+
+/*
+body{
+  background-image: url(http://img.gnioty.pl/pictures/2011/5/bc78573ad86b8b58ad9fb01c437254fd.jpg);
+  background-repeat: no-repeat;
+}
+*/
