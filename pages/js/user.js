@@ -20,12 +20,9 @@
 				$user.show();
 				$logout.show()
                 }
-               // else{
-               // 	alert("Niewłaściwe dane logowania");
-                }
             });
         }
-       
+        
 
 
 			
