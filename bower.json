@@ -1,7 +1,7 @@
 {
   "name": "Projekt",
   "version": "0.0.0",
-  "license": "MIT",
+  "license": "GNU",
   "ignore": [
     "**/.*",
     "node_modules",

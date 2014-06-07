@@ -11,7 +11,7 @@ server.listen(3000, function () {
     console.log('Serwer działa na porcie 3000');
 });
 
-mongoose.connect("mongodb://localhost/schronisko", function (err) {
+mongoose.connect("mongodb://localhost/serwisinformacyjny", function (err) {
     if (err) {
         console.log(err);
     }
@@ -21,14 +21,14 @@ mongoose.connect("mongodb://localhost/schronisko", function (err) {
 });
 
 app.get('/', function (req, res) {
-    res.sendfile(__dirname + '/strony/index.html');
+    res.sendfile(__dirname + '/pages/index.html');
     app.use(express.static(__dirname + '/bower_components')); // deklaracja css/bootstrap
-    app.use(express.static(__dirname + '/strony'));
+    app.use(express.static(__dirname + '/pages'));
 });
 
 app.use(less({
-    src: '/strony/less',
-    dest: '/strony/public/css',
+    src: '/pages/less',
+    dest: '/assets/css',
     prefix: '/css',
     compress: true
 }));
