@@ -2,10 +2,10 @@ $(function(){
     var stronaglowna = $('#stronaglowna').html(); //skopiowanie treści ze strony głównej
     var dalej ="<br>Nasz serwis internetowy ruszył w dniu dzisiejszym<br>";
     var kontakt = "Możecie się z nami skontaktować poprzez adres e-mail:";
-    var about = "Strona zrobione przez: Paweł Karczewski";
+    var about = "Strona zrobiona przez: Paweł Karczewski";
     var $contact = $('#kontakt');
     var $about = $('#about');
-    var $thefooter = $('#footer');
+    var $thefooter = $('#footer').html();
  //  $('body').css('color','red'); //ustaw kolor w body na "red"
     function dalej(){
         $("#container").append(dalej);
@@ -29,12 +29,11 @@ $(function(){
             $(".row").append(dalej);
             $(".row").html(dalej +"html");
 
-            $('body').css('color','blue');
 
         })
     })
     
-    $('#mainpage,#more').click(function(){
+    $('#more').click(function(){
         if(this.id === "mainpage"){
             $("#stronaglowna").html(stronaglowna);
 
@@ -49,14 +48,14 @@ $(function(){
     })
 
     		$contact.click(function(){
-    			$('#stronaglowna').html("");
-    			$('#stronaglowna').append("<div class='span4'><h5>" + kontakt + "</h5>" + "admin@testowastrona.pl" + "</div>");
+    			$('.row').html("");
+    			$('.row').append("<div class='span4'><h5>" + kontakt + "</h5>" + "admin@testowastrona.pl" + "</div>");
 
     		})
 
     		$about.click(function(){
     			$('.row').html("");
-    			$('#stronaglowna').append("<div class='span4'><h5>" + about);
+    			$('.row').append("<div class='span4'><h5>" + about);
     		})
 
 
