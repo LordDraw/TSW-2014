@@ -4,8 +4,7 @@ var express = require('express'),
 	io = require('socket.io').listen(server),
 	less = require('less-middleware'),
 	mongoose = require('mongoose'),
-	nicknames = [],
-	count = 1;
+    users = {};
 
 server.listen(3000, function () {
     console.log('Serwer działa na porcie 3000');
@@ -27,21 +26,16 @@ app.get('/', function (req, res) {
 });
 
 app.use(less({
-    src: '/assets/less',
+    src: '/pages/less',
     dest: '/assets/css',
     prefix: '/css',
     compress: true
 }));
 
-mongoose.connect('mongodb://localhost/adminchat', function(err){
-    if(err){
-        console.log(err);
-    } else{
-        console.log('Connected to mongodb!');
-    }
-});
+
 
 var chatSchema = mongoose.Schema({
+    title: String,
     nick: String,
     msg: String,
     created: {type: Date, default: Date.now}
@@ -76,31 +70,15 @@ io.sockets.on('connection', function(socket){
     }
 
     socket.on('send message', function(data, callback){
-        var msg = data.trim();
-        console.log('after trimming message is: ' + msg);
-        if(msg.substr(0,3) === '/w '){
-            msg = msg.substr(3);
-            var ind = msg.indexOf(' ');
-            if(ind !== -1){
-                var name = msg.substring(0, ind);
-                var msg = msg.substring(ind + 1);
-                if(name in users){
-                    users[name].emit('whisper', {msg: msg, nick: socket.nickname});
-                    console.log('message sent is: ' + msg);
-                    console.log('Whisper!');
-                } else{
-                    callback('Error!  Enter a valid user.');
-                }
-            } else{
-                callback('Error!  Please enter a message for your whisper.');
-            }
-        } else{
-            var newMsg = new Chat({msg: msg, nick: socket.nickname});
+       // var msg = data.trim();
+      //  console.log('after trimming message is: ' + msg);
+
+            var newMsg = new Chat({title:data.title,msg: data.mess, nick: socket.nickname});
             newMsg.save(function(err){
                 if(err) throw err;
-                io.sockets.emit('new message', {msg: msg, nick: socket.nickname});
+                io.sockets.emit('new message', {title:data.title, msg: data.mess, nick: socket.nickname});
             });
-        }
+        
     });
     
     socket.on('disconnect', function(data){

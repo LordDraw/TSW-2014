@@ -1,4 +1,5 @@
 $(function(){
+    var socket = io.connect();
     var stronaglowna = $('#stronaglowna').html(); //skopiowanie treści ze strony głównej
     var dalej ="<br>Nasz serwis internetowy ruszył w dniu dzisiejszym<br>";
     var kontakt = "Możecie się z nami skontaktować poprzez adres e-mail:";
@@ -20,7 +21,18 @@ $(function(){
     //    $('body').css('color','blue');
 
     })
+    socket.on('load old msgs', function(docs){
+        for(var i=docs.length-1; i >= 0; i--){
+            displayMsg(docs[i]);
+        }
+    });
+   socket.on('new message', function (data) {
+            displayMsg(data);
+        });
 
+    function displayMsg(data){
+        $('.row').append('<span class="article"><p>' + data.msg + "</p></span><b>"+data.nick+"</b><br/>");
+    }
     $('#mainpage').click(function(){
       $("#stronaglowna").html(stronaglowna);
         $('#more').click(function(){

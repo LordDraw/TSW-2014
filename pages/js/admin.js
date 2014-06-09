@@ -1,3 +1,4 @@
+$(function(){
 			var socket = io.connect();
 			var $nickForm = $('#setNick');
 			var $nickError = $('#nickError');
@@ -6,7 +7,14 @@
 			var $messageForm = $('#send-message');
 			var $messageBox = $('#message');
 			var $chat = $('#chat');
+			var admin = $('#addarticle');
 			
+			$('#addarticle').click(function(){
+       		$('.row').html("");
+            $("#admin").html(admin);
+            
+        });
+
 			$nickForm.submit(function(e){
 				e.preventDefault();
 				socket.emit('new user', $nickBox.val(), function(data){
@@ -14,7 +22,7 @@
 						$('#nickWrap').hide();
 						$('#contentWrap').show();
 					} else{
-						$nickError.html('That username is already taken!  Try again.');
+						$nickError.html('Ta nazwa jest obecnie używana. Podaj inną');
 					}
 				});
 				$nickBox.val('');
@@ -50,7 +58,5 @@
 				$chat.append('<span class="msg"><b>' + data.nick + ': </b>' + data.msg + "</span><br/>");
 			}
 			
-			socket.on('whisper', function(data){
-				$chat.append('<span class="whisper"><b>' + data.nick + ': </b>' + data.msg + "</span><br/>");
-			});
+		
 		});

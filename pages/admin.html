@@ -49,7 +49,7 @@
               <li class="dropdown pull-right" id="panelAdmina" style="visibility: hidden;">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="/tool.html" id="addarticle">Dodaj Artykuł</a></li>
+                    <li><a id="addarticle">Dodaj Artykuł</a></li>
                 </ul>
             </li>
             </ul>
@@ -67,52 +67,27 @@
         </div>
       </div>
     </div>
-
     <div class="container" id="stronaglowna">
+      <div id="nickWrap">
+    <p>Enter a username:</p>
+    <p id="nickError"></p>
+    <form id="setNick">
+      <input size="35" id="nickname"></input>
+      <input type="submit"></input>
+    </form>
+  </div>
 
-      <div class="hero-unit" id="gornynaglowek">
-        <h1> Witaj w serwisie informacyjnym.</h1>
-      <p>Znajdziesz tu różne informacje z kraju i ze świata</p>
-      <p><a href="#" class="btn btn-primary btn-large" id="more">Dowiedz się więcej &raquo;</a></p>
-      </div>
-
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="span4">
-          <h2>Tytuł artykułu</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <a class="btn" href="#">Przeczytaj całość &#187;</a>
-        </div>
-        <div class="span4">
-          <h2>Tytuł artykułu</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <a class="btn" href="#">Przeczytaj całość &#187;</a>
-       </div>
-        <div class="span4">
-          <h2>Tytuł artykułu</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <a class="btn" href="#">Przeczytaj całość &#187;</a>
-        </div>
-      </div>
-
-      
-
-      <footer id ="footer">
+  <div id="contentWrap">
+    <div id="chatWrap">
+      <div id="chat"></div>
+      <form id="send-message">
+        <input size="35" id="message"></input>
+        <input type="submit"></input>
+      </form>
+    </div>
+    <div id="users"></div>
+  </div>
+  <footer id ="footer">
         <p>&copy; Paweł Karczewski 2014. Wszystkie prawa zatrzeżone
   Strona internetowa korzysta z Ciasteczek. Więcej informacji znajdziesz <a href="http://pl.wikipedia.org/wiki/Ciasteczko">tutaj</a></p>
 <p>  Uwagi możesz jeszcze zgłaszać do administratora na adres e-mail <a href="mailto:admin@testowastrona.pl">tutaj</a></p>
@@ -123,8 +98,6 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-
-
     <script src="../assets/js/jquery.js"></script>
     <script src="../assets/js/bootstrap-transition.js"></script>
     <script src="../assets/js/bootstrap-alert.js"></script>
@@ -139,7 +112,7 @@
     <script src="../assets/js/bootstrap-carousel.js"></script>
     <script src="../assets/js/bootstrap-typeahead.js"></script>
     <script src="../socket.io/socket.io.js"></script>
-    <script src="/js/skrypt.js"></script>
+    <script src="/js/admin.js"></script>
     <script src="/js/user.js"></script>
   </body>
 </html>
